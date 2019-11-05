@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <title>Empleos Alarcos</title>
+</head>
+
+<body class="empleosBody">
+    <header>
+        <div class="menu">
+            <div class="contenedor">
+                <div class="logo">ALARCOS S.A</div>
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="./empleos.html">Empleos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="./login.html">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <form id="aspForm" action="" method="post" class="input-container text-white text-start p-5">
+            <div class="datosPersonales form-area d-block" id="datosPersonales">
+                <h2>Datos Personales</h2><br><br>
+                <div class="d-flex justify-content-start form-row">
+                    <div class="input-field form-group col-md-4 mb-4">
+                        <label for="aspNombre">Nombre</label>
+                        <input type="text" class="form-control" name="aspNombre" id="aspNombre">
+                    </div>
+                    <div class="input-field form-group col-md-4">
+                        <label for="aspApellido">Apellido</label>
+                        <input type="text" class="form-control" name="aspApellido" id="aspApellido">
+                    </div>
+
+                </div>
+                <div class="d-flex justify-content-start form-row">
+                    <div class="input-field form-group col-sm-3">
+                        <label for="aspTipoId">Tipo de identificaión</label>
+                        <select class="form-control" name="aspTipoId" id="aspTipoId">
+                            <option value="V">V</option>
+                            <option value="E">E</option>
+                        </select>
+
+                    </div>
+                    <div class="input-field form-group col-sm-4">
+                        <label for="aspCedula">Número de identificaión</label>
+                        <input type="text" class="form-control" name="aspCedula" id="aspCedula">
+                    </div>
+                </div>
+                <br><span class="">Fecha de nacimiento</span><br>
+                <div class="justify-content-start form-row">
+
+                    <div class="input-field col-sm-3">
+                        <label for="aspDiaNacimiento">Día</label>
+                        <select class="form-control form-col-sm form-group" name="aspDiaNacimiento"
+                            id="aspDiaNacimiento">
+                        </select>
+                    </div>
+                    <div class="input-field col-sm-3">
+                        <label for="aspMesNacimiento">Mes</label>
+                        <select class="form-control form-col-sm form-group" name="aspMesNacimiento"
+                            id="aspMesNacimiento">
+                            <option value="Enero">Enero</option>
+                            <option value="Febrero">Febrero</option>
+                            <option value="Marzo">Marzo</option>
+                            <option value="Abril">Abril</option>
+                            <option value="Mayo">Mayo</option>
+                            <option value="Junio">Junio</option>
+                            <option value="Julio">Julio</option>
+                            <option value="Agosto">Agosto</option>
+                            <option value="Septiembre">Septiembre</option>
+                            <option value="Octubre">Octubre</option>
+                            <option value="Noviembre">Noviembre</option>
+                            <option value="Diciembre">Diciembre</option>
+                        </select>
+                    </div>
+                    <div class="input-field col-sm-3">
+                        <label for="aspYearNacimiento">Año</label>
+                        <select class="form-control form-col-sm form-group" name="aspYearNacimiento"
+                            id="aspYearNacimiento">
+                        </select>
+                    </div>
+                </div>
+                <br><span>Sexo</span><br>
+                <div class="justify-content-start form-row p-3">
+
+                    <div class="form-check col-sm-3">
+                        <input class="form-check-input" type="radio" name="aspSexo" id="aspSexoHombre" value="Hombre">
+                        <label class="form-check-label" for="aspSexoHombre">
+                            Masculino
+                        </label>
+                    </div>
+                    <div class="form-check col-sm-3">
+                        <input class="form-check-input" type="radio" name="aspSexo" id="aspSexoMujer" value="Mujer">
+                        <label class="form-check-label" for="aspSexoMujer">
+                            Femenino
+                        </label>
+                    </div>
+
+                </div>
+                <br><span>Estado Civil</span><br><br>
+                <div class="justify-content-start form-row">
+                    <select class="form-control col-md-4" name="aspEstadoCivil" id="aspEstadoCivil">
+                        <option value="soltero">Soltero/a</option>
+                        <option value="casado">Casado/a</option>
+                        <option value="divorciado">Divorciado/a</option>
+                        <option value="viudo">Viudo/a</option>
+                    </select>
+                </div>
+                <br><span>Contácto</span><br>
+                <div class="justify-content-start form-row">
+                    <div class="input-field form-group col-md-3">
+                        <label for="aspTipoTele1">Tipo</label>
+                        <select class="form-control" name="aspTipoTele1" id="aspTipoTele1">
+                            <option value="celular">Celular</option>
+                            <option value="fijo">Fijo</option>
+                            <option value="oficina">Oficina</option>
+                        </select>
+                    </div>
+                    <div class="input-field form-group col-md-3">
+                        <label for="aspTel">Número</label>
+                        <input class="form-control" type="text" name="aspTel" id="aspTel">
+
+                    </div>
+                </div>
+                <div class="justify-content-start form-row">
+                    <div class="input-field form-group col-md-3">
+                        <label for="aspTipoTele2">Tipo</label>
+                        <select class="form-control" name="aspTipoTele2" id="aspTipoTele2">
+                            <option value="celular">Celular</option>
+                            <option value="fijo">Fijo</option>
+                            <option value="oficina">Oficina</option>
+                        </select>
+                    </div>
+                    <div class="input-field form-group col-md-3">
+                        <label for="aspTel">Número</label>
+                        <input class="form-control" type="text" name="aspTel" id="aspTel">
+
+                    </div>
+                </div>
+                <div class="justify-content-start form-row">
+                    <div class="input-field form-group col-md-7">
+                        <label for="aspMail">Correo Electrónico</label>
+                        <input type="email" class="form-control" name="aspMail" id="aspMail">
+                    </div>
+                </div>
+
+                <div class="justify-content-start form-row">
+                    <div class="input-field form-group col-md-3">
+                        <label for="aspEstado">Estado</label>
+                        <input type="text" class="form-control" name="aspEstado" id="aspEstado">
+                    </div>
+                    <div class="input-field form-group col-md-4">
+                        <label for="aspCiudad">Ciudad</label>
+                        <input type="text" class="form-control" name="aspCiudad" id="aspCiudad">
+                    </div>
+                    <div class="input-field form-group col-md-7">
+                        <label for="aspDireccion">Dirección</label>
+                        <input class="form-control" type="text" name="aspDireccion" id="aspDireccion">
+                    </div>
+                </div>
+                <br><span>Posee Vehículo Propio</span>
+                <div class="justify-content-start form-row p-4">
+                    <div class="form-check col-sm-1">
+                        <input class="form-check-input" type="radio" name="aspVehiculo" id="aspVehiculoSi">
+                        <label class="form-check-label" for="aspVehiculoSi">Si</label>
+                    </div>
+                    <div class="form-check col-sm-1">
+                        <input class="form-check-input" type="radio" name="aspVehiculo" id="aspVehiculoNo">
+                        <label class="form-check-label" for="aspVehiculoNo">No</label>
+                    </div>
+                </div>
+                <div class="justify-content-start form-row p-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="aspDiscapacidad" id="aspDiscapacidad">
+                        <label class="form-check-label" for="aspDiscapacidad">Discapacidad</label>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <input type="div" class="justify-self-end btn btn-success shadow-sm border" id="goToProfesional"
+                        value="Siguiente ->">
+                </div>
+            </div>
+
+            <div class="datosProfesionales form-area d-none" id="datosProfesionales">
+                <h2>Datos Profesionales</h2><br><br>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="aspTitulo" class="check-input-label">Título universitario o Cargo actual</label>
+                        <input type="text" name="aspTitulo" id="aspTitulo" class="form-control">
+                    </div>
+                </div>
+                <div class="justify-content-start form-row">
+                    <div class="col-md-7">
+                        <label for="aspDescripcion">Descripción del perfil profesional</label>
+                        <textarea class="form-control" name="aspDescripcion" id="aspDescripcion" cols="30"
+                            rows="5"></textarea>
+                    </div>
+                </div>
+                <br><span>Experiencia laboral</span><br>
+                <br>
+                <div class="btn btn-success">Agregar +</div>
+                <div class="agregado">
+                    <div class="form-row">
+                        <div class="col-md-4">
+                            <label for="aspNombreEmpresa1">Nombre de la Empresa</label>
+                            <input class="form-control" type="text" name="aspNombreEmpresa1" id="aspNombreEmpresa1">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="aspCargoEmpresa1">Cargo desempeñado</label>
+                            <input class="form-control" type="text" name="aspCargoEmpresa1" id="aspCargoEmpresa1">
+                        </div>
+                    </div>
+                    <h4>Ingreso</h4>
+                    <div class="form-row">
+                        <div class="col-md-2">
+                            <label for="aspInicioEmpresaMes">Mes</label>
+                            <select class="form-control form-col-sm form-group" name="aspInicioEmpresaMes"
+                                id="aspInicioEmpresaMes">
+                                <option value="Enero">Enero</option>
+                                <option value="Febrero">Febrero</option>
+                                <option value="Marzo">Marzo</option>
+                                <option value="Abril">Abril</option>
+                                <option value="Mayo">Mayo</option>
+                                <option value="Junio">Junio</option>
+                                <option value="Julio">Julio</option>
+                                <option value="Agosto">Agosto</option>
+                                <option value="Septiembre">Septiembre</option>
+                                <option value="Octubre">Octubre</option>
+                                <option value="Noviembre">Noviembre</option>
+                                <option value="Diciembre">Diciembre</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="aspInicioEmpresaYear">Año</label>
+                            <select class="form-control form-col-sm form-group" name="aspInicioEmpresaYear"
+                                id="aspInicioEmpresaYear">
+                            </select>
+                        </div>
+                    </div>
+
+                    <h4>Finalización</h4>
+                    <div class="form-row">
+                        <div class="col-md-2">
+                            <label for="aspFinalEmpresaMes">Mes</label>
+                            <select class="form-control form-col-sm form-group" name="aspFinalEmpresaMes"
+                                id="aspFinalEmpresaMes">
+                                <option value="Enero">Enero</option>
+                                <option value="Febrero">Febrero</option>
+                                <option value="Marzo">Marzo</option>
+                                <option value="Abril">Abril</option>
+                                <option value="Mayo">Mayo</option>
+                                <option value="Junio">Junio</option>
+                                <option value="Julio">Julio</option>
+                                <option value="Agosto">Agosto</option>
+                                <option value="Septiembre">Septiembre</option>
+                                <option value="Octubre">Octubre</option>
+                                <option value="Noviembre">Noviembre</option>
+                                <option value="Diciembre">Diciembre</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="aspFinalEmpresaYear">Año</label>
+                            <select class="form-control form-col-sm form-group" name="aspFinalEmpresaYear"
+                                id="aspFinalEmpresaYear">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <br><span>Educación</span><br>
+                <br>
+                <div class="btn btn-success">Agregar +</div>
+                <div class="agregado">
+                    <div class="form-row">
+                        <div class="col-md-3">
+                            <label for="aspInstituto">Institución educativa</label>
+                            <input type="text" name="aspInstituto" id="aspInstituto" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="aspEgresado">Título de egresado</label>
+                            <input type="text" name="aspEgresado" id="aspEgresado" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="aspInstitutoNivel">Nivel Educativo</label>
+                            <select class="form-control" name="aspInstitutoNivel" id="aspInstitutoNivel">
+                                <option value="primaria">Básica Primaria</option>
+                                <option value="secundaria">Básica Secundaria</option>
+                                <option value="bachillerato">Bachillerato</option>
+                                <option value="tecnico">Técnico/Profesional</option>
+                                <option value="universidad">Universidad</option>
+                                <option value="posgrado">Posgrado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <h4>Periodo de ingreso</h4>
+                    <div class="form-row">
+                        <div class="col-md-2">
+                            <label for="aspInicioEmpresaMes">Mes</label>
+                            <select class="form-control form-col-sm form-group" name="aspInicioEmpresaMes"
+                                id="aspInicioEmpresaMes">
+                                <option value="Enero">Enero</option>
+                                <option value="Febrero">Febrero</option>
+                                <option value="Marzo">Marzo</option>
+                                <option value="Abril">Abril</option>
+                                <option value="Mayo">Mayo</option>
+                                <option value="Junio">Junio</option>
+                                <option value="Julio">Julio</option>
+                                <option value="Agosto">Agosto</option>
+                                <option value="Septiembre">Septiembre</option>
+                                <option value="Octubre">Octubre</option>
+                                <option value="Noviembre">Noviembre</option>
+                                <option value="Diciembre">Diciembre</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="aspInicioEmpresaYear">Año</label>
+                            <select class="form-control form-col-sm form-group" name="aspInicioEmpresaYear"
+                                id="aspInicioEmpresaYear">
+                            </select>
+                        </div>
+                    </div>
+
+                    <h4>Periodo de finalización</h4>
+                    <div class="form-row">
+                        <div class="col-md-2">
+                            <label for="aspFinalEmpresaMes">Mes</label>
+                            <select class="form-control form-col-sm form-group" name="aspFinalEmpresaMes"
+                                id="aspFinalEmpresaMes">
+                                <option value="Enero">Enero</option>
+                                <option value="Febrero">Febrero</option>
+                                <option value="Marzo">Marzo</option>
+                                <option value="Abril">Abril</option>
+                                <option value="Mayo">Mayo</option>
+                                <option value="Junio">Junio</option>
+                                <option value="Julio">Julio</option>
+                                <option value="Agosto">Agosto</option>
+                                <option value="Septiembre">Septiembre</option>
+                                <option value="Octubre">Octubre</option>
+                                <option value="Noviembre">Noviembre</option>
+                                <option value="Diciembre">Diciembre</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="aspFinalEmpresaYear">Año</label>
+                            <select class="form-control form-col-sm form-group" name="aspFinalEmpresaYear"
+                                id="aspFinalEmpresaYear">
+                            </select>
+                        </div>
+                    </div>
+                    <h4>Estado</h4>
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="aspEduStatus" id="aspEducCulminado">
+                                <label class="form-check-label" for="aspEducCulminado">Culminado</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="aspEduStatus" id="aspEducCursando">
+                                <label class="form-check-label" for="aspEducCursando">Cursando</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="aspEduStatus" id="aspEducAbandonado">
+                                <label class="form-check-label" for="aspEducAbandonado">Abandonado</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <br><span>Idiomas</span><br>
+                <br>
+                <div class="btn btn-success">Agregar +</div>
+                <div class="form-row">
+                    <div class="col-md-3">
+                        <label for="aspIdioma">Idioma</label>
+                        <input type="text" name="aspIdioma" id="aspIdioma" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="aspIdiomaNivel">Nivel</label>
+                        <select class="form-control" name="aspIdiomaNivel" id="aspIdiomaNivel">
+                            <option value="basico">Basico</option>
+                            <option value="intermedio">Intermedio</option>
+                            <option value="avanzado">Avanzado</option>
+                        </select>
+                    </div>
+                </div>
+                <br><span>Conocimientos y Habilidades</span><br><br>
+                <div class="form-row">
+                    <div class="col-md-3">
+                        <input type="text" name="aspHabilidades" id="aspHabilidades" class="form-control">
+                    </div>
+
+                    <div id="setNewSkill">Agregar</div>
+
+                </div>
+                <div id="aspHabilidadesField" class="form-row p-2">
+                    <br>
+                </div>
+                <br><span>Subir Currículum</span><br><br>
+                <div class="form-row">
+                    <div class="col-lg-6 d-flex align-item-center justify-content-center">
+                        <input class="btn btn-info p-3" type="file" name="aspCurriculum" id="aspCurriculum">
+                    </div>
+                </div>
+                <br>
+                <div class="form-row d-flex justify-content-between">
+                    <div id="goToPersonal" class="btn btn-lg btn-secondary">
+                        Regresar</div> <div class="btn btn-lg btn-primary">Enviar
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="./bootstrap.min.js"></script>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>

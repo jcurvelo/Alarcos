@@ -1,0 +1,93 @@
+                        * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                        font-family: 'Roboto', sans-serif;
+                    }
+                    
+                    body {
+                        background-color: rgb(0, 189, 182);
+                        ;
+                    }
+                    
+                    .login .fb {
+                        background: #3b5999;
+                        border-style: none;
+                        color: #fff;
+                    }
+                    
+                    .login .tw {
+                        background: #55acef;
+                        border-style: none;
+                        color: #fff;
+                    }
+                    
+                    .login .correo {
+                        background: #33d4ce;
+                        border-style: none;
+                        color: #fff;
+                    }
+                    
+                    @media only screen and (max-width: 540px) {
+                        .login-container {
+                            display: block;
+                        }
+                        .register,
+                        .login {
+                            flex: none;
+                        }
+                        .register::after {
+                            top: unset;
+                            bottom: -25px;
+                            left: 50%;
+                            transform: translateX(-50%) rotate(90deg);
+                        }
+                    }
+                    
+                    header {
+                        position: relative;
+                        height: auto;
+                    }
+                    
+                    header .menu {
+                        background: rgba(0, 0, 0, 0.514);
+                        overflow: hidden;
+                        align-content: center;
+                    }
+                    
+                    header .logo {
+                        color: rgba(255, 255, 255, 0.8);
+                        float: left;
+                        font-size: 30px;
+                        line-height: 80px;
+                        background-position: center;
+                    }
+                    
+                    header nav {
+                        float: right;
+                    }
+                    
+                    header nav ul {
+                        list-style: none;
+                    }
+                    
+                    header nav ul li {
+                        float: left;
+                    }
+                    
+                    header nav ul li a {
+                        color: rgba(255, 255, 255, 0.8);
+                        text-decoration: none;
+                        display: block;
+                        font-size: 18px;
+                        padding: 0 20px;
+                        line-height: 80px;
+                    }
+                    
+                    header nav ul li:hover {
+                        background: rgba(0, 0, 0, .8);
+                        border-bottom: inset 5px solid #fff;
+                    }
+                    
+                    header nav ul li a:hover {
+                        color: #fff;
