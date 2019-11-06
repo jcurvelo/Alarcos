@@ -301,3 +301,23 @@ article{
     cursor: pointer;
     position: relative;
 }
+
+.advance-btn{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1vw;
+}
+.advance-btn p{
+    width: 20%;
+    background-color: rgb(0, 80, 228);
+    cursor: pointer;
+    padding: 2vw;
+    text-align: center;
+    transition: 500ms;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.advance-btn p:hover{
+    background-color: rgb(1, 52, 148);
+}
+

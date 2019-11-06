@@ -1,28 +1,31 @@
-const goToProfesionales = document.getElementById('goToProfesional');
-const goToPersonal = document.getElementById('goToPersonal');
-goToProfesionales.addEventListener('click',()=>{
-    document.getElementById('datosPersonales').classList.remove('d-block');
-    document.getElementById('datosPersonales').classList.add('d-none');
-    document.getElementById('datosProfesionales').classList.remove('d-none');
-    document.getElementById('datosProfesionales').classList.add('d-block');
-    window.scrollTo(0, 0);
+const datosPersonales = document.getElementById('datosPersonales');
+const datosProfesionales = document.getElementById('datosProfesionales');
+const textoCamio = document.getElementById('textoSiguiente');
+textoCamio.addEventListener('click', () => {
+    if (!checkInputs()) {
+        alert('Existe un problema');
+    }else{
+        if (datosPersonales.classList.contains('d-block')) {
+            datosPersonales.classList.replace('d-block', 'd-none');
+            datosProfesionales.classList.replace('d-none', 'd-block');
+            textoCamio.innerText = 'Regresar';
+        } else {
+            datosPersonales.classList.replace('d-none', 'd-block');
+            datosProfesionales.classList.replace('d-block', 'd-none');
+            textoCamio.innerText = 'Siguiente';
+        }
+    }
+
+
 })
 
-goToPersonal.addEventListener('click',()=>{
-    document.getElementById('datosPersonales').classList.remove('d-none');
-    document.getElementById('datosPersonales').classList.add('d-block');
-    document.getElementById('datosProfesionales').classList.remove('d-block');
-    document.getElementById('datosProfesionales').classList.add('d-none');
-    window.scrollTo(0, 0);
-})
-
-document.getElementById('setNewSkill').addEventListener('click',()=>{
+document.getElementById('setNewSkill').addEventListener('click', () => {
     let getSkill = document.getElementById('aspHabilidades');
     let newSkill = document.createElement('p');
-    newSkill.setAttribute('class','aspSkills m-1');
+    newSkill.setAttribute('class', 'aspSkills m-1');
     newSkill.textContent = getSkill.value;
     document.getElementById('aspHabilidadesField').appendChild(newSkill);
-    // console.log('hey')
+
 })
 
 
@@ -54,15 +57,18 @@ for (let i = 2019; i >= 1900; i--) {
 }
 
 
-
-
-
-
-const misInputs = document.getElementsByClassName('clase-input');
-
-for(let x in misInputs){
-    if(misInputs[x]=='' || misInputs[x]==null){
-        alert('Eso Ta malooooo');
-        return;
+function checkInputs() {
+    const inputs = datosPersonales.getElementsByTagName('input');
+    let looping = await function(){
+        for (let i =0;i<inputs.length-2;i++) {
+            if (inputs[i].value == '' || inputs[i].value == null) {
+                inputs[i].style.borderColor = 'red';
+                inputs[i].focus();
+                console.log(inputs[i]);
+                return false;
+            }
+        }
     }
+    
+    return true;
 }
