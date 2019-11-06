@@ -55,20 +55,23 @@ for (let i = 2019; i >= 1900; i--) {
     yearOption.innerText = i;
     document.getElementById('aspFinalEmpresaYear').appendChild(yearOption);
 }
-
+const todosInputs = document.getElementById('aspForm').getElementsByTagName('input');
+for(let x in todosInputs){
+    console.log(todosInputs[x].name)
+}
 
 function checkInputs() {
     const inputs = datosPersonales.getElementsByTagName('input');
-    let looping = await function(){
-        for (let i =0;i<inputs.length-2;i++) {
-            if (inputs[i].value == '' || inputs[i].value == null) {
-                inputs[i].style.borderColor = 'red';
-                inputs[i].focus();
-                console.log(inputs[i]);
-                return false;
-            }
-        }
-    }
+    // let looping = await function(){
+    //     for (let i =0;i<inputs.length-2;i++) {
+    //         if (inputs[i].value == '' || inputs[i].value == null) {
+    //             inputs[i].style.borderColor = 'red';
+    //             inputs[i].focus();
+    //             console.log(inputs[i]);
+    //             return false;
+    //         }
+    //     }
+    // }
     
     return true;
 }
