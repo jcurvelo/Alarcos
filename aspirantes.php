@@ -20,9 +20,9 @@
         <div class="input-group">
             <div class="input-group-prepend">
                 <select class="form-control" name="campo" id="campo">
-                    <option value="id">ID</option>
+                    <!-- <option value="id">ID</option> -->
                     <option value="nombre">Nombre</option>
-                    <option value="Apellido">Apellido</option>
+                    <option value="apellido">Apellido</option>
                     <option value="cedula">Cédula</option>
                     <option value="sexo">Sexo</option>
                     <option value="telefono">Teléfono</option>
@@ -33,7 +33,9 @@
                     <option value="habilidades">Habilidades</option>
                 </select>
                 <input type="text" name="filtro" id="filtro" class="form-control">
-                <button class="btn btn-success" type="button" id="button-addon1">Filtrar</button>
+                <button onClick="filtrar()" class="btn btn-success" type="button" id="button-addon1">Filtrar</button>
+                <button onClick="refrescar()" class="btn btn-secondary" type="button" id="button-addon2">Refrescar</button>
+
             </div>
         </div>
         <h1>Aspirantes a trabajar</h1>
@@ -101,6 +103,7 @@
     </div>
 
     <script src="./bootstrap.min.js"></script>
+    <script src="./filtro.js"></script>
 </body>
 
 </html>
