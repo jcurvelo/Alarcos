@@ -1,4 +1,6 @@
 <?php
+    require('./connection.php');
+
     $aspNombre = $_POST['aspNombre'];
     $aspApellido = $_POST['aspApellido'];
     $aspCedula = $_POST['aspCedula'];
@@ -21,4 +23,15 @@
     $aspHabilidades = $_POST['aspHabilidades'];
     $aspCurriculum = $_POST['aspCurriculum'];
 
-    echo $aspNombre.'<br>'.$aspApellido;
+    $sqlPersonal = "INSERT INTO datos_aspirantes(aspNombre,aspApellido,aspCedula,aspSexo,aspTelefono,aspMail,aspEstado,aspCiudad,aspDireccion,aspVehiculo,aspDiscapacidad) 
+    VALUES ('$aspNombre','$aspApellido','$aspCedula','$aspSexo','$aspTel','$aspMail','$aspEstado','$aspCiudad','$aspDireccion','$aspVehiculo','$aspDiscapacidad')";
+    $sqlProfesional ="INSERT INTO datos_aspirantes(aspTitulo,aspNombreEmpresa,aspCargoEmpresa,aspInstituto,aspEgresado,aspEduStatus,aspIdioma,aspHabilidades)
+    VALUES ('$aspTitulo','$aspNombreEmpresa1','$aspCargoEmpresa1','$aspEgresado','$aspEduStatus','$aspIdioma','$aspHabilidades')";
+
+
+    if(!$conn->query($sqlPersonal)){
+        echo 'Error personal '.$conn->error;
+    }
+    if(!$conn->query($sqlProfesional)){
+        echo 'Error profesional'.$conn->error;
+    }

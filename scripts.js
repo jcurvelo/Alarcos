@@ -59,7 +59,6 @@ const todosInputs = document.getElementById('aspForm').getElementsByTagName('inp
 for(let x in todosInputs){
     console.log(todosInputs[x].name)
 }
-
 function checkInputs() {
     const inputs = datosPersonales.getElementsByTagName('input');
     // let looping = await function(){
